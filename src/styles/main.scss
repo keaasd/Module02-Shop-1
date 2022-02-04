@@ -1,0 +1,35 @@
+$bg: #805345;
+
+body {}
+
+.header {
+   background: $bg;
+
+   &__title {
+      font-size: 40px;
+      color: aqua;
+      background: #8080ff;
+   }
+
+   &__text {
+      color: cornflowerblue;
+   }
+
+   &__img {
+      width: 500px;
+      height: 275px;
+   }
+}
+
+.image {
+   margin-top: 10px;
+   background: crimson;
+
+   &__path {
+      fill: brown;
+
+      &:hover {
+         fill: chartreuse;
+      }
+   }
+}
