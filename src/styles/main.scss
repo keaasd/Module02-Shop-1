@@ -1,35 +1,155 @@
-$bg: #805345;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
 
-body {}
+$green: #27300f;
+$orange: #d26a22;
+$white: #fff;
+
+$font-jost: 'Jost',
+sans-serif;
+$font-cormorant: 'Cormorant',
+serif;
+
+
+html {
+   font-size: 10px;
+}
+
+body {
+   font-family: $font-jost;
+   font-size: 1.6rem;
+   color: $green;
+}
+
+h1,
+h2,
+h3 {
+   font-family: $font-cormorant;
+   font-weight: 700;
+   margin: 0;
+}
+
+p {
+   margin: 0;
+}
+
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
 
 .header {
-   background: $bg;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-top: 4rem;
 
-   &__title {
-      font-size: 40px;
-      color: aqua;
-      background: #8080ff;
+   &__nav {
+      display: flex;
+      gap: 5rem;
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
    }
 
-   &__text {
-      color: cornflowerblue;
+   &__item {}
+
+   &__link {
+      text-decoration: none;
+      color: $green;
+
+      &:hover {
+         color: $orange;
+      }
    }
 
-   &__img {
-      width: 500px;
-      height: 275px;
+   &__tel {
+      text-decoration: none;
+      color: $green;
+      font-weight: 500;
+
+      &:hover {
+         color: $orange;
+      }
+   }
+
+   &__cart {
+      display: block;
+      background: $orange url(../images/cart.svg) no-repeat center center /1.7rem 1.5rem;
+      width: 3.8rem;
+      height: 3.8rem;
+      border-radius: 100%;
+      position: relative;
+      border: 1px solid $orange;
+
+      &:hover {
+         background-color: $green;
+         border: 1px solid $green;
+      }
+   }
+
+   &__counter {
+      font-size: .8rem;
+      color: $white;
+      position: absolute;
+      right: .8rem;
+      top: .6rem;
    }
 }
 
-.image {
-   margin-top: 10px;
-   background: crimson;
+.logo {
+   display: block;
+   background: url(../images/logo.svg) no-repeat top /cover;
+   width: 12rem;
+   height: 3.2rem;
+}
 
-   &__path {
-      fill: brown;
+.main {
+   background: url(../images/main.png) no-repeat center /cover;
 
-      &:hover {
-         fill: chartreuse;
+   &__item {
+      margin-left: 12rem;
+      max-width: 378px;
+      margin-top: 6rem;
+   }
+
+   &__link {
+      margin-top: 6rem;
+   }
+}
+
+.title {
+   font-size: 8rem;
+
+   &__span {
+      font-style: italic;
+   }
+
+   &_block {
+      .title__span {
+         display: block;
       }
+   }
+}
+
+.description {
+   &_size-s {
+      font-size: 1.8rem;
+   }
+}
+
+.link {
+   color: $white;
+   text-transform: uppercase;
+   text-decoration: none;
+   letter-spacing: .1rem;
+   background: $orange;
+   box-shadow: 0px 1rem .65rem rgba(207, 92, 13, 0.2);
+   border-radius: 3.8rem;
+   padding: 2.5rem 4rem;
+   display: inline-block;
+
+   &:hover {
+      background-color: #bf601f;
    }
 }
