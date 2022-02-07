@@ -43,6 +43,19 @@ p {
    align-items: center;
    justify-content: space-between;
    padding-top: 4rem;
+   margin-bottom: 5rem;
+
+   &__wrapper1 {
+      display: flex;
+      align-items: center;
+      gap: 11.8rem;
+   }
+
+   &__wrapper2 {
+      display: flex;
+      align-items: center;
+      gap: 8rem;
+   }
 
    &__nav {
       display: flex;
@@ -51,8 +64,6 @@ p {
       margin: 0;
       padding-left: 0;
    }
-
-   &__item {}
 
    &__link {
       text-decoration: none;
@@ -67,6 +78,7 @@ p {
       text-decoration: none;
       color: $green;
       font-weight: 500;
+      letter-spacing: 0.1em;
 
       &:hover {
          color: $orange;
@@ -92,8 +104,8 @@ p {
       font-size: .8rem;
       color: $white;
       position: absolute;
-      right: .8rem;
-      top: .6rem;
+      right: .5rem;
+      top: .4rem;
    }
 }
 
@@ -106,6 +118,8 @@ p {
 
 .main {
    background: url(../images/main.png) no-repeat center /cover;
+   position: relative;
+   padding-bottom: 18.7rem;
 
    &__item {
       margin-left: 12rem;
@@ -114,12 +128,147 @@ p {
    }
 
    &__link {
-      margin-top: 6rem;
+      margin-top: 5rem;
+   }
+
+   &__flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+   }
+
+   &__cover {
+      flex-basis: 763px;
+      height: 763px;
+      border: 1px solid rgba($green, .4);
+      border-radius: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+   }
+
+   &__line {
+      width: 658px;
+      height: 658px;
+      border: 1px solid rgba($green, .4);
+      border-radius: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__img {
+      width: 92%;
+      box-shadow: 29px 52px 121px -76px rgba($green, .8);
+      border-radius: 100%;
+   }
+
+   &__btn {
+      border: none;
+      background: transparent;
+      padding: 0;
+      color: $green;
+      text-align: left;
+      position: absolute;
+      line-height: 1.4;
+
+      &:hover {
+         &::before {
+            background: $orange;
+            box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+         }
+      }
+
+      &::before {
+         content: '';
+         background: $green;
+         width: 11px;
+         height: 11px;
+         box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+         border-radius: 100%;
+         position: absolute;
+      }
+
+      &_1 {
+         top: 5.8%;
+         left: 8.8%;
+
+         &::before {
+            bottom: 26%;
+            right: -59%;
+         }
+      }
+
+      &_2 {
+         top: 25.3%;
+         right: 0.3%;
+
+         &::before {
+            top: 38%;
+            left: -35%;
+         }
+      }
+
+      &_3 {
+         bottom: -6%;
+         right: 32%;
+
+         &::before {
+            top: -53%;
+            left: 23%;
+         }
+      }
+   }
+
+   &__food {
+      display: block;
+      color: rgba($green, .8);
+   }
+
+   &__tomato {
+      position: absolute;
+      bottom: 11%;
+      right: 7.3%;
+      width: 11rem;
+   }
+
+   &__avocado {
+      position: absolute;
+      top: 4.5%;
+      right: 0.5%;
+      width: 19rem;
+   }
+
+   &__beans {
+      position: absolute;
+      bottom: 14.7%;
+      left: 1.2%;
+      width: 11.8rem;
+   }
+
+   &__cucumber {
+      position: absolute;
+      top: 0;
+      left: 36.3%;
+      width: 8.5rem;
+   }
+
+   &__pepper {
+      position: absolute;
+      top: 37%;
+      left: 3%;
+      width: 8.6rem;
    }
 }
 
 .title {
    font-size: 8rem;
+   line-height: 1;
+   margin-top: 3.6rem;
 
    &__span {
       font-style: italic;
@@ -135,6 +284,7 @@ p {
 .description {
    &_size-s {
       font-size: 1.8rem;
+      line-height: 1.5;
    }
 }
 
@@ -146,7 +296,7 @@ p {
    background: $orange;
    box-shadow: 0px 1rem .65rem rgba(207, 92, 13, 0.2);
    border-radius: 3.8rem;
-   padding: 2.5rem 4rem;
+   padding: 2.5rem 4.5rem;
    display: inline-block;
 
    &:hover {
