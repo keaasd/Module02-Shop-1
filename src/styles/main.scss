@@ -111,7 +111,7 @@ p {
 
 .logo {
    display: block;
-   background: url(../images/logo.svg) no-repeat top /cover;
+   background: url(../images/logo.svg) no-repeat top /contain;
    width: 12rem;
    height: 3.2rem;
 }
@@ -120,6 +120,7 @@ p {
    background: url(../images/main.png) no-repeat center /cover;
    position: relative;
    padding-bottom: 18.7rem;
+   z-index: 0;
 
    &__item {
       margin-left: 12rem;
@@ -165,6 +166,11 @@ p {
       width: 92%;
       box-shadow: 29px 52px 121px -76px rgba($green, .8);
       border-radius: 100%;
+   }
+
+   &__text {
+
+      padding-top: 3.6rem;
    }
 
    &__btn {
@@ -234,13 +240,15 @@ p {
       bottom: 11%;
       right: 7.3%;
       width: 11rem;
+      z-index: -1;
    }
 
    &__avocado {
       position: absolute;
       top: 4.5%;
-      right: 0.5%;
+      right: 0;
       width: 19rem;
+      z-index: -1;
    }
 
    &__beans {
@@ -248,6 +256,7 @@ p {
       bottom: 14.7%;
       left: 0;
       width: 11.8rem;
+      z-index: -1;
    }
 
    &__cucumber {
@@ -255,6 +264,7 @@ p {
       top: 0;
       left: 36.3%;
       width: 8.5rem;
+      z-index: -1;
    }
 
    &__pepper {
@@ -262,13 +272,13 @@ p {
       top: 37%;
       left: 3%;
       width: 8.6rem;
+      z-index: -1;
    }
 }
 
 .title {
    font-size: 8rem;
    line-height: 1;
-   margin-top: 3.6rem;
 
    &__span {
       font-style: italic;
@@ -282,9 +292,14 @@ p {
 }
 
 .description {
+   line-height: 1.5;
+
    &_size-s {
       font-size: 1.8rem;
-      line-height: 1.5;
+   }
+
+   &_size-m {
+      font-size: 2.4rem;
    }
 }
 
@@ -301,5 +316,172 @@ p {
 
    &:hover {
       background-color: #bf601f;
+   }
+}
+
+.offer {
+   background: url(../images/offer.png) no-repeat center /cover;
+   padding: 1.2rem 0 20rem;
+
+   &__text {
+      margin-top: 6rem;
+      max-width: 700px;
+   }
+
+   &__slider {
+      overflow: hidden;
+      padding-top: 100px;
+   }
+}
+
+.swiper {
+   overflow: initial;
+   padding-left: 1px;
+
+   &-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      box-shadow: inset rgba($green, .4) 0 0 0 1px;
+      border-radius: 2rem;
+      padding: 4rem;
+      height: 520px;
+      box-sizing: border-box;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+         box-shadow: inset rgba($green, .6) 0 0 0 3px;
+         border-radius: 2rem;
+      }
+
+      &:hover &__title {
+         opacity: 1;
+         z-index: 1;
+      }
+
+      &:hover &__box {
+         max-height: 500px;
+         opacity: .7;
+      }
+
+
+      &:hover &__overlay {
+         opacity: .55;
+      }
+
+      &__overlay {
+         position: absolute;
+         height: 100%;
+         left: 0px;
+         top: 0px;
+         width: 100%;
+         background: $white;
+         opacity: 0;
+         transition: 0.5s;
+      }
+
+      &__title {
+         font-size: 3rem;
+      }
+
+      &__box {
+         overflow: hidden;
+         max-height: 0;
+         transition: 0.5s linear;
+      }
+
+      &__text {
+         width: 263px;
+         line-height: 1.5;
+         margin: 2.7rem 0 3.5rem;
+      }
+
+      &__link {
+         color: $green;
+         font-weight: 500;
+         text-transform: uppercase;
+         text-decoration: none;
+         letter-spacing: .1rem;
+
+
+
+
+
+         &::before {
+            content: '+';
+            display: inline-block;
+            border: 1px solid $green;
+            width: 28px;
+            height: 28px;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 99%;
+            font-size: 2.4rem;
+            margin-right: 2rem;
+         }
+      }
+
+      &__milk {
+         background: url(../images/milk.png) no-repeat 24.1rem 3rem /127px 385px;
+         transition: 0.5s linear;
+
+         &:hover {
+            background-size: 127px 420px;
+            background-position-y: 4rem;
+         }
+
+      }
+
+      &__pasta {
+         background: url(../images/pasta.png) no-repeat 15.3rem 2.6rem /301px 418px;
+         transition: 0.5s linear;
+
+         &:hover {
+            background-size: 301px 453px;
+            background-position-y: 3.6rem;
+         }
+      }
+
+      &__meat {
+         background: url(../images/meat.png) no-repeat 2.3rem 9.2rem /434px 315px;
+         transition: 0.5s linear;
+
+         &:hover {
+            background-size: 434px 350px;
+            background-position-y: 10.2rem;
+         }
+      }
+   }
+
+   &-pagination {
+      display: none;
+   }
+
+   &-button-next,
+   &-button-prev {
+      top: -63px;
+      // width: 10px;
+      // height: 18px;
+      fill: $green;
+      opacity: 0.4;
+
+      &:hover {
+         opacity: 1;
+      }
+
+      &::after {
+         content: none;
+         // color: rgba($green, .4);
+      }
+   }
+
+   &-button-next {
+      right: -8px;
+   }
+
+   &-button-prev {
+      left: initial;
+      right: 75px;
    }
 }
