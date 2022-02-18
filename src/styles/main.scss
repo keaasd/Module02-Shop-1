@@ -70,6 +70,7 @@ p {
    &__link {
       text-decoration: none;
       color: $green;
+      transition: .3s;
 
       &:hover {
          color: $orange;
@@ -81,6 +82,7 @@ p {
       color: $green;
       font-weight: 500;
       letter-spacing: 0.1em;
+      transition: .3s;
 
       &:hover {
          color: $orange;
@@ -95,6 +97,8 @@ p {
       border-radius: 100%;
       position: relative;
       border: 1px solid $orange;
+      transition: .3s;
+      cursor: pointer;
 
       &:hover {
          background-color: $green;
@@ -116,6 +120,12 @@ p {
    background: url(../images/logo.svg) no-repeat top /contain;
    width: 12rem;
    height: 3.2rem;
+
+   &_max {
+      width: 18rem;
+      height: 5rem;
+      margin-top: .6rem;
+   }
 }
 
 .main {
@@ -183,6 +193,7 @@ p {
       position: absolute;
       line-height: 1.4;
 
+
       &:hover {
          &::before {
             background: $orange;
@@ -198,6 +209,8 @@ p {
          box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
          border-radius: 100%;
          position: absolute;
+         transition: .3s;
+         cursor: pointer;
       }
 
       &_1 {
@@ -312,8 +325,15 @@ p {
    background: $orange;
    box-shadow: 0px 1rem .65rem rgba(207, 92, 13, 0.2);
    border-radius: 3.8rem;
-   padding: 2.5rem 4.5rem;
+   padding: 2.5rem 5rem;
    display: inline-block;
+   border: none;
+   transition: .3s;
+
+   &_size-s {
+      font-size: 1.4rem;
+      padding: 1.8rem 3.5rem;
+   }
 
    &:hover {
       background-color: #bf601f;
@@ -322,7 +342,7 @@ p {
 
 .offer {
    background: url(../images/offer.png) no-repeat center /cover;
-   padding: 1.2rem 0 12.8rem;
+   padding: 1.2rem 0 17.2rem;
 
    &__text {
       margin-top: 6rem;
@@ -334,30 +354,32 @@ p {
 
 .slider {
    overflow: hidden;
-   padding-top: 10rem;
+   padding-top: 9rem;
 }
 
 .swiper {
    overflow: initial;
-   padding-left: 1px;
+   padding-left: 2px;
 
    &-slide {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      // border: 1px solid rgba($green, .4);
       box-shadow: inset rgba($green, .4) 0 0 0 1px;
       border-radius: 2rem;
-      padding: 4rem;
-      height: 520px;
+      padding: 3rem;
       box-sizing: border-box;
       position: relative;
       cursor: pointer;
       z-index: 1;
 
+      &_height-m {
+         height: 520px;
+      }
+
       &_height-l {
          height: 680px;
-         // gap: 6rem;
+         padding: 2.7rem 3.8rem 3.8rem;
       }
 
       &:hover {
@@ -412,6 +434,7 @@ p {
          text-decoration: none;
          letter-spacing: .1rem;
          opacity: .8;
+         transition: .3s;
 
          &:hover {
             opacity: 1;
@@ -466,13 +489,18 @@ p {
          position: relative;
          overflow: hidden;
          width: 100%;
-         height: 293px;
+         // height: 293px;
          text-align: center;
-         // margin-bottom: 6rem;
+         margin-bottom: 6rem;
       }
 
       &__img {
-         height: 100%;
+         width: 100%;
+         max-width: 351px;
+         height: 305px;
+         // height: 100%;
+         object-fit: contain;
+
       }
 
 
@@ -481,8 +509,17 @@ p {
 
          &_size-m {
             font-size: 1.8rem;
+            line-height: 1.5;
+            margin: 2.4rem 0 3rem;
+            width: 280px;
+            min-height: 50px;
+         }
+
+         &_size-s {
+            font-size: 1.6rem;
             margin: 2.7rem 0 3rem;
             width: 280px;
+            min-height: 40px;
          }
       }
 
@@ -504,11 +541,12 @@ p {
 
    &-button-next,
    &-button-prev {
-      top: -63px;
+      top: -54px;
       // width: 10px;
       // height: 18px;
       fill: $green;
       opacity: 0.4;
+      transition: .3s;
 
       &:hover {
          opacity: 1;
@@ -539,23 +577,27 @@ p {
       background: transparent;
       padding: 0;
       border: none;
-
-      &_size-m {
-         width: 50px;
-         height: 50px;
-      }
+      width: 50px;
+      height: 50px;
    }
 
    &__minus {
       pointer-events: none;
-      background: url(../images/minus.svg) no-repeat center / 70px 35px;
+      background: url(../images/minus.svg) no-repeat center / contain;
       opacity: .4;
+
+      &_min {
+         background-size: 40px 40px;
+      }
    }
 
    &__plus {
       pointer-events: none;
-      background: url(../images/plus.svg) no-repeat center / 70px 35px;
+      background: url(../images/plus.svg) no-repeat center / contain;
 
+      &_min {
+         background-size: 40px 40px;
+      }
    }
 
    &__input {
@@ -564,17 +606,26 @@ p {
       width: 46px;
       border: none;
       padding: 0;
+
+      &_min {
+         width: 20px;
+      }
    }
 }
 
+
+
+
+
 .about {
-   padding-bottom: 200px;
+   background: url(../images/about.png) no-repeat center /cover;
+   padding-bottom: 19.5rem;
 
    &__box {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 28rem;
+      gap: 20rem;
       margin-top: 6rem;
 
    }
@@ -589,7 +640,7 @@ p {
       align-items: center;
       justify-content: space-between;
       list-style: none;
-      gap: 10rem;
+      gap: 8.4rem;
       padding-left: 0;
       margin: 0;
    }
@@ -611,7 +662,7 @@ p {
          height: 87px;
          border-radius: 100%;
          border: 1px solid rgba($green, .4);
-         margin-bottom: 1.5rem;
+         margin-bottom: 2rem;
       }
 
       &:nth-child(1) {
@@ -635,9 +686,516 @@ p {
 }
 
 .trends {
-   margin-bottom: 200px;
+   background: url(../images/trends.png) no-repeat center /cover;
+   padding-bottom: 18.6rem;
 
    &__text {
-      margin-top: 6rem;
+      margin-top: 3.8rem;
+   }
+}
+
+.catalog {
+   background: url(../images/catalog.png) no-repeat center /cover;
+   padding-bottom: 14.2rem;
+
+   &__text {
+      margin: 3.6rem 0 8.8rem;
+      letter-spacing: 0.1rem;
+   }
+
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 2.1rem;
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 4.7rem;
+   }
+
+   &__item {
+      flex-basis: 230px;
+      text-align: center;
+   }
+
+   &__link {
+      display: block;
+      font-size: 1.8rem;
+      color: $green;
+      opacity: .5;
+      border: 1px solid rgba($green, .5);
+      border-radius: 4rem;
+      padding: 2.4rem 0;
+      text-decoration: none;
+      transition: .3s;
+
+      &:hover {
+         color: $orange;
+         opacity: 1;
+         border: 1px solid $orange;
+      }
+   }
+
+
+   &__load {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      font-weight: 500;
+      color: $green;
+      opacity: 0.8;
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+      padding: 0;
+      margin: 6.5rem auto 0;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover {
+         opacity: 1;
+      }
+
+      &::before {
+         content: '';
+         background: url(../images/refresh.svg) no-repeat center /contain;
+         width: 25px;
+         height: 25px;
+      }
+
+   }
+}
+
+.catalog-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 2rem;
+
+   &__product {
+      box-shadow: inset rgba($green, .4) 0 0 0 1px;
+      border-radius: 2rem;
+      padding: 2.8rem 2.7rem 4rem 3rem;
+      box-sizing: border-box;
+   }
+
+   &__cover {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 205px;
+      text-align: center;
+   }
+
+   &__img {
+      width: 100%;
+      max-width: 351px;
+      height: 100%;
+      object-fit: contain;
+   }
+
+   &__title {
+      font-size: 3rem;
+      margin-top: 1.7rem;
+      margin-bottom: 0;
+   }
+
+   &__description {
+      font-size: 1.6rem;
+      color: rgba($green, .7);
+      margin-top: 1.8rem;
+      min-height: 61px;
+      max-width: 250px;
+      line-height: 1.5;
+   }
+
+   &__price {
+      font-size: 2.4rem;
+      margin-bottom: 3rem;
+   }
+
+   &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+}
+
+.services {
+   background: url(../images/services.png) no-repeat center /cover;
+   padding-bottom: 20rem;
+}
+
+.services-flex {
+   display: flex;
+   justify-content: space-between;
+   gap: 15.8rem;
+   margin-top: 7.8rem;
+
+   &__delivery {
+      margin-left: 12rem;
+      max-width: 575px;
+   }
+
+   &__text {
+      font-size: 1.8rem;
+      letter-spacing: 0.01rem;
+      line-height: 1.4;
+
+      .color {
+         display: block;
+         color: $orange;
+      }
+
+      &:nth-child(2) {
+         margin-top: 2.9rem;
+      }
+
+   }
+
+   &__link {
+      font-size: 1.8rem;
+      color: $green;
+      letter-spacing: 0.01rem;
+      text-decoration: none;
+      position: relative;
+
+      &::after {
+         content: '';
+         display: inline-block;
+         width: 100%;
+         height: 1px;
+         background: #5c634a;
+         position: absolute;
+         left: 0;
+         bottom: 1px;
+      }
+   }
+
+   &__pay {
+
+      &_color {}
+   }
+
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 2.7rem;
+      margin: 4rem 0 0 0;
+      padding-left: 0;
+      list-style: none;
+   }
+
+   &__item {
+      opacity: .4;
+      transition: .3s;
+      transform: scale(1);
+
+      &:hover {
+         opacity: 1;
+         transform: scale(1.05);
+      }
+
+      &:nth-child(1) {
+         display: block;
+         background: url(../images/mastercard.svg) no-repeat center /contain;
+         width: 56px;
+         height: 38px;
+      }
+
+      &:nth-child(2) {
+         display: block;
+         background: url(../images/visa.svg) no-repeat center /contain;
+         width: 79px;
+         height: 27px;
+      }
+
+      &:nth-child(3) {
+         display: block;
+         background: url(../images/paypal.svg) no-repeat center /contain;
+         width: 89px;
+         height: 27px;
+      }
+   }
+}
+
+.contact {
+   padding-bottom: 15rem;
+}
+
+.contact-box {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 34rem;
+
+   &__text {
+      font-size: 1.8rem;
+      letter-spacing: 0.01rem;
+      line-height: 1.4;
+      margin: 6.2rem 0 0 12rem;
+      max-width: 395px;
+      flex-grow: 1;
+   }
+
+   &__list {
+      margin: 5.7rem 0 0 0;
+      padding-left: 0;
+      list-style: none;
+   }
+
+   &__item {
+
+      &:nth-child(1) a {
+         padding-bottom: 1.3rem;
+
+         &::before {
+            content: '';
+            display: inline-block;
+            background: url(../images/phone.svg) no-repeat center / contain;
+            width: 29px;
+            height: 25px;
+         }
+      }
+
+      &:nth-child(2) a {
+         &::before {
+            content: '';
+            display: inline-block;
+            background: url(../images/mail.svg) no-repeat center / contain;
+            width: 29px;
+            height: 19px;
+         }
+      }
+   }
+
+   &__info {
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: $green;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 2.8rem;
+      transition: .3s;
+
+      &:hover {
+         color: $orange;
+      }
+   }
+
+   &__form {
+      flex-basis: 589px;
+   }
+}
+
+.card {
+   border: 2px solid rgba($green, .4);
+   border-radius: 2rem;
+   padding: 3.8rem 5.6rem 3.7rem;
+
+   &__title {
+      font-size: 30px;
+      margin-bottom: 3rem;
+   }
+
+   &__label {
+      display: block;
+      font-size: 1.2rem;
+      margin: 0 0 1rem 0.6rem;
+   }
+
+   &__input {
+      display: block;
+      color: rgba($green, .4);
+      border: 1px solid rgba($green, .4);
+      border-radius: 2rem;
+      padding: 2.2rem 3rem;
+      margin-bottom: 2.8rem;
+      width: 100%;
+      box-sizing: border-box;
+
+      &:focus {
+         border: 1px solid rgba($green, 1);
+         outline: none;
+      }
+
+      &:invalid {
+         border: red;
+      }
+   }
+
+   &__link {
+      margin-top: 1rem;
+      cursor: pointer;
+   }
+
+   &__check {
+      font-size: 1.2rem;
+      color: rgba($green, .6);
+      line-height: 1.5;
+      max-width: 360px;
+      margin-top: 1.4rem;
+   }
+
+   &__doc {
+      color: $green;
+      opacity: .6;
+      text-decoration: none;
+      position: relative;
+      transition: .3s;
+
+      &:hover {
+         opacity: 1;
+
+         &::after {
+            background: $green;
+         }
+      }
+
+      &::after {
+         content: '';
+         display: inline-block;
+         width: 100%;
+         height: 1px;
+         background: #dee0db;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         transition: .3s;
+      }
+
+
+   }
+}
+
+.footer {
+   background: url(../images/footer.png) no-repeat center / cover;
+}
+
+footer {
+   border-top: 1px solid #d4d6cf;
+   padding: 9rem 0;
+}
+
+.footer {
+   &__box {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__wrapper1 {
+      display: flex;
+      gap: 30.6rem;
+
+   }
+
+   &__wrapper2 {
+      display: flex;
+      gap: 17.7rem;
+   }
+
+   &__list {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+   }
+
+   &__item {
+      font-size: 1.8rem;
+      margin-bottom: 2.7rem;
+
+      &:nth-child(3) {
+         margin-bottom: 0;
+      }
+   }
+
+   &__link {
+      color: $green;
+      text-decoration: none;
+      transition: .3s;
+
+      &:hover {
+         color: $orange;
+      }
+   }
+
+   &__contact {}
+
+   &__tel {
+      display: block;
+      font-size: 1.8rem;
+      color: $green;
+      text-decoration: none;
+      transition: .3s;
+
+      &:hover {
+         color: $orange;
+      }
+
+      &:nth-child(1) {
+         font-size: 2.7rem;
+         margin-bottom: 3rem;
+      }
+   }
+
+   &__text {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5.7rem;
+      font-size: 1.6rem;
+      color: rgba($green, .6);
+   }
+
+   &__course {
+      color: $green;
+      opacity: .6;
+      text-decoration: none;
+      transition: .3s;
+
+      &:hover {
+         opacity: 1;
+      }
+   }
+}
+
+
+
+.footer-social {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0;
+   padding-left: 0;
+   list-style: none;
+   margin-top: 3rem;
+
+   &__item {}
+
+   &__link {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $green;
+      border-radius: 100%;
+      opacity: .8;
+      transition: .3s;
+
+      &:hover {
+         opacity: 1;
+      }
+   }
+
+   &__vk {
+      background: url(../images/vk.svg) no-repeat center / 23px 19px;
+   }
+
+   &__inst {
+      background: url(../images/instagram.svg) no-repeat center / 19px 19px;
+   }
+
+   &__fb {
+      background: url(../images/facebook.svg) no-repeat center / 9px 19px;
    }
 }
