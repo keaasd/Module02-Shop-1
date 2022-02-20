@@ -177,6 +177,7 @@ p {
    &__img {
       width: 92%;
       border-radius: 100%;
+      box-shadow: 0px 0px 20px rgba($green, .5);
       animation: shadow 15s linear infinite;
    }
 
