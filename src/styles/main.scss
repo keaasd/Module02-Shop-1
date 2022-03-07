@@ -16,6 +16,7 @@ $mob_500: 500px;
 $mob_600: 600px;
 $mob_650: 650px;
 $tab_768: 768px;
+$tab_800: 800px;
 $tab_860: 860px;
 $tab_900: 900px;
 $tab_960: 960px;
@@ -28,6 +29,10 @@ $desk_1380: 1380px;
 $desk_1450: 1450px;
 $desk_1720: 1720px;
 
+html,
+body {
+   overflow-x: hidden;
+}
 
 html {
    font-size: 10px;
@@ -597,6 +602,12 @@ p {
          top: 9%;
          left: -1.7%;
       }
+
+      @media (max-width: $mob_400) {
+         width: 5.3rem;
+         top: 10%;
+         left: -5.7%;
+      }
    }
 
    &__avocado {
@@ -615,6 +626,12 @@ p {
          width: 5.5rem;
          top: 9%;
          right: -4%;
+      }
+
+      @media (max-width: $mob_400) {
+         width: 8rem;
+         top: 12%;
+         right: -16%;
       }
    }
 
@@ -645,6 +662,11 @@ p {
          right: -1.5%;
          bottom: 30%;
       }
+
+      @media (max-width: $mob_400) {
+         right: -2.5%;
+         bottom: 23%;
+      }
    }
 
    &__pepper {
@@ -662,6 +684,11 @@ p {
          width: 2.7rem;
          top: 32%;
          left: 0;
+      }
+
+      @media (max-width: $mob_400) {
+         top: 38%;
+         left: -2%;
       }
    }
 }
@@ -719,6 +746,7 @@ p {
       @media (max-width: $desk_1280) {
          font-size: 2.2rem;
       }
+
    }
 
    @media (max-width: $mob_400) {
@@ -749,6 +777,20 @@ p {
 
    @media (max-width: $desk_1150) {
       padding: 2rem 3rem;
+   }
+
+   @media (max-width: $desk) {
+      font-size: 1.1rem;
+      padding: 1.5em 2.5rem;
+   }
+
+   @media (max-width: $tab_768) {
+      font-size: 1.4rem;
+      padding: 2rem 3rem;
+   }
+
+   @media (max-width: $mob_650) {
+      font-size: 1.2rem;
    }
 
    @media (max-width: $mob_600) {
@@ -797,7 +839,7 @@ p {
    }
 
    @media (max-width: $mob_400) {
-      padding-bottom: 2.5rem;
+      padding-bottom: 4.5rem;
    }
 
    &__text {
@@ -825,13 +867,18 @@ p {
 .slider {
    overflow: hidden;
    padding-top: 9rem;
+   padding-bottom: 5rem;
 
-   @media (max-width: $tab_768) {
-      padding-top: 0;
-      padding-bottom: 7rem;
-      max-width: 402px;
-      margin: 0 auto;
-   }
+   // @media (max-width: $tab_860) {
+
+   // }
+
+   // @media (max-width: $tab_768) {
+   //    padding-top: 0;
+   //    padding-bottom: 7rem;
+   //    max-width: 402px;
+   //    margin: 0 auto;
+   // }
 
    @media (max-width: $mob_600) {
       // max-width: 402px;
@@ -846,6 +893,7 @@ p {
    @media (max-width: $mob_400) {
       max-width: 210px;
       margin: 0 auto;
+      padding-top: 0;
    }
 
 }
@@ -875,6 +923,15 @@ p {
 
          @media (max-width: $desk_1090) {
             height: 400px;
+            margin-right: 20px;
+         }
+
+         @media (max-width: $tab_860) {
+            height: 360px;
+         }
+
+         @media (max-width: $mob_600) {
+            height: 320px;
          }
 
          @media (max-width: $mob_500) {
@@ -904,8 +961,33 @@ p {
             padding: 2.7rem 1.7rem 3.8rem;
          }
 
+         @media (max-width: $desk_1090) {
+            height: 500px;
+         }
+
+         @media (max-width: $desk) {
+            height: 450px;
+         }
+
+         @media (max-width: $tab_860) {
+            height: 400px;
+            padding-bottom: 3rem;
+         }
+
+         @media (max-width: $tab_768) {
+            height: 450px;
+         }
+
+         @media (max-width: $mob_650) {
+            height: 410px;
+         }
+
+         @media (max-width: $mob_600) {
+            height: 360px;
+         }
+
          @media (max-width: $mob_500) {
-            height: 480px;
+            height: 360px;
             padding: 1.7rem 1.7rem 1.8rem;
          }
 
@@ -922,7 +1004,6 @@ p {
 
       &:hover &__box {
          max-height: 500px;
-
       }
 
 
@@ -946,19 +1027,40 @@ p {
       &__title {
          font-size: 3rem;
 
-         @media (max-width: $desk_1090) {
+         @media (max-width: $desk_1200) {
             font-size: 2.8rem;
          }
 
+         @media (max-width: $desk_1090) {
+            font-size: 2.6rem;
+         }
+
+         @media (max-width: $desk) {
+            font-size: 2.4rem;
+         }
+
+         @media (max-width: $tab_960) {
+            font-size: 2.1rem;
+         }
+
+         @media (max-width: $tab_860) {
+            font-size: 1.9rem;
+         }
+
+         // @media (max-width: $tab_800) {
+         //    font-size: 1.9rem;
+         // }
+
          @media (max-width: $tab_768) {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+         }
+
+         @media (max-width: $mob_650) {
+            font-size: 2.1rem;
          }
 
          @media (max-width: $mob_600) {
             text-align: center;
-         }
-
-         @media (max-width: $mob_500) {
             font-size: 2rem;
             margin-bottom: 1.5rem;
          }
@@ -974,7 +1076,7 @@ p {
          max-height: 0;
          transition: 0.3s;
 
-         @media (max-width: $mob_500) {
+         @media (max-width: $mob_600) {
             max-height: 500px;
          }
       }
@@ -985,12 +1087,20 @@ p {
          margin: 2.3rem 0 3.5rem;
          opacity: .7;
 
-         @media (max-width: $tab_768) {
+         @media (max-width: $desk) {
+            font-size: 1.4rem;
             width: 100%;
+         }
+
+         @media (max-width: $tab_768) {
+            font-size: 1.6rem;
+         }
+
+         @media (max-width: $mob_650) {
             font-size: 1.4rem;
          }
 
-         @media (max-width: $mob_500) {
+         @media (max-width: $mob_600) {
             font-size: 1.2rem;
             display: none;
          }
@@ -1009,11 +1119,15 @@ p {
          opacity: .8;
          transition: .3s;
 
+         @media (max-width: $tab_960) {
+            font-size: 1.2rem;
+         }
+
          @media (max-width: $tab_768) {
             font-size: 1.4rem;
          }
 
-         @media (max-width: $mob_500) {
+         @media (max-width: $mob_600) {
             font-size: 1.2rem;
             justify-content: center;
             gap: 1rem;
@@ -1034,6 +1148,12 @@ p {
             background: url(../images/plus.svg) no-repeat center / contain;
             width: 30px;
             height: 30px;
+
+            @media (max-width: $tab_960) {
+               font-size: 1.2rem;
+               width: 20px;
+               height: 20px;
+            }
 
             @media (max-width: $tab_768) {
                width: 25px;
@@ -1062,8 +1182,13 @@ p {
          background: url(../images/milk.png) no-repeat center /contain;
          transition: 0.3s;
 
+         @media (max-width: $mob_600) {
+            background-position: 0 6%;
+            background-size: 200px;
+         }
+
          @media (max-width: $mob_500) {
-            background-position: -34% 2%;
+            background-position: -13% 2%;
             background-size: 255px;
          }
 
@@ -1083,8 +1208,13 @@ p {
          background: url(../images/pasta.png) no-repeat center /contain;
          transition: 0.3s;
 
+         @media (max-width: $mob_600) {
+            background-position: 0 23%;
+            background-size: 200px;
+         }
+
          @media (max-width: $mob_500) {
-            background-position: -34% 2%;
+            background-position: 0 2%;
             background-size: 255px;
          }
 
@@ -1104,7 +1234,8 @@ p {
          transition: 0.3s;
 
          @media (max-width: $mob_600) {
-            background-position: 100%;
+            background-size: 200px;
+            background-position: 100% 25%;
          }
 
          @media (max-width: $mob_500) {
@@ -1151,6 +1282,30 @@ p {
             height: 200px;
          }
 
+         @media (max-width: $desk_1090) {
+            height: 150px;
+         }
+
+         @media (max-width: $desk) {
+            height: 140px;
+         }
+
+         @media (max-width: $tab_860) {
+            height: 110px;
+         }
+
+         @media (max-width: $tab_768) {
+            height: 130px;
+         }
+
+         @media (max-width: $mob_650) {
+            height: 100px;
+         }
+
+         @media (max-width: $mob_600) {
+            height: 85px;
+         }
+
          @media (max-width: $mob_400) {
             height: 90px;
          }
@@ -1168,13 +1323,40 @@ p {
             width: 280px;
             min-height: 50px;
 
+            @media (max-width: $desk_1090) {
+               font-size: 1.6rem;
+               margin-bottom: 2.6rem;
+            }
+
+            @media (max-width: $desk) {
+               font-size: 1.4rem;
+               width: 100%;
+               margin-bottom: 2.5rem;
+            }
+
+            @media (max-width: $tab_860) {
+               margin: 1.8rem 0 2rem;
+               min-height: 45px;
+            }
+
+            @media (max-width: $tab_800) {
+               font-size: 1.3rem;
+            }
+
             @media (max-width: $tab_768) {
                font-size: 1.6rem;
+               min-height: 50px;
             }
+
+            @media (max-width: $mob_650) {
+               font-size: 1.4rem;
+               min-height: 45px;
+            }
+
 
             @media (max-width: $mob_600) {
                text-align: center;
-               margin: 1.5rem auto;
+               margin: 0 auto 1rem;
             }
 
             @media (max-width: $mob_500) {
@@ -1201,7 +1383,24 @@ p {
          font-size: 2.4rem;
          margin-bottom: 3rem;
 
+         @media (max-width: $desk) {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+         }
+
+         @media (max-width: $tab_860) {
+            margin-bottom: 2rem;
+         }
+
+         @media (max-width: $tab_800) {
+            font-size: 1.9rem;
+         }
+
          @media (max-width: $tab_768) {
+            font-size: 2.4rem;
+         }
+
+         @media (max-width: $mob_650) {
             font-size: 2.2rem;
          }
 
@@ -1271,6 +1470,13 @@ p {
    display: flex;
    justify-content: center;
    align-items: center;
+
+   &:nth-child(2) {
+      @media (max-width: $mob_400) {
+         bottom: -25px;
+      }
+   }
+
 }
 
 .swiper-pagination-bullet-active {
@@ -1308,6 +1514,21 @@ p {
          height: 35px;
       }
 
+      @media (max-width: $desk) {
+         width: 30px;
+         height: 30px;
+      }
+
+      @media (max-width: $tab_860) {
+         width: 25px;
+         height: 25px
+      }
+
+      @media (max-width: $tab_768) {
+         width: 30px;
+         height: 30px;
+      }
+
       &_min {
          width: 40px;
          height: 40px;
@@ -1316,6 +1537,7 @@ p {
             width: 35px;
             height: 35px;
          }
+
 
          @media (max-width: $mob_650) {
             width: 30px;
@@ -1345,8 +1567,19 @@ p {
          width: 30px;
       }
 
+      @media (max-width: $desk) {
+         font-size: 2rem;
+         width: 25px;
+      }
+
+      @media (max-width: $tab_860) {
+         font-size: 1.6rem;
+         width: 18px;
+      }
+
       @media (max-width: $tab_768) {
-         font-size: 2.2rem;
+         font-size: 2rem;
+         width: 25px;
       }
 
       &_min {
@@ -1456,7 +1689,7 @@ p {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      animation: transform 5s linear infinite;
+      // animation: transform 5s linear infinite;
 
       @media (max-width: $desk_1090) {
          font-size: 2rem;
@@ -1467,20 +1700,20 @@ p {
       }
 
 
-      @keyframes transform {
-         0% {
-            transform: scale(1);
-         }
+      // @keyframes transform {
+      //    0% {
+      //       transform: scale(1);
+      //    }
 
-         50% {
-            transform: scale(1.2);
-         }
+      //    50% {
+      //       transform: scale(1.2);
+      //    }
 
-         100% {
-            transform: scale(1);
-         }
+      //    100% {
+      //       transform: scale(1);
+      //    }
 
-      }
+      // }
 
       &::before {
          content: '';
@@ -1555,7 +1788,7 @@ p {
    }
 
    @media (max-width: $mob_400) {
-      padding-bottom: 2.8rem;
+      padding-bottom: 5rem;
    }
 
 
@@ -1601,7 +1834,7 @@ p {
       }
 
       @media (max-width: $mob_400) {
-         height: 80px;
+         height: 77px;
       }
 
    }
@@ -1735,7 +1968,7 @@ p {
 
       @media (max-width: $mob_500) {
          font-size: 1rem;
-         margin-top: 3.2rem;
+         margin-top: 4.3rem;
          line-height: 1.4;
          gap: 0.7rem;
       }
@@ -1853,7 +2086,7 @@ p {
       }
 
       @media (max-width: $mob_650) {
-         font-size: 2rem;
+         font-size: 2.2rem;
       }
 
       @media (max-width: $mob_600) {
@@ -1862,6 +2095,7 @@ p {
 
       @media (max-width: $mob_500) {
          font-size: 1.4rem;
+         margin-top: 1.6rem;
       }
    }
 
@@ -1887,6 +2121,7 @@ p {
          font-size: 1rem;
          min-height: 45px;
          width: 95px;
+         margin: 0.6rem auto 0.7rem;
       }
 
    }
@@ -1906,7 +2141,7 @@ p {
 
       @media (max-width: $mob_500) {
          font-size: 1.2rem;
-         margin-bottom: 1rem;
+         margin-bottom: 1.3rem;
       }
    }
 
@@ -2142,7 +2377,6 @@ p {
       letter-spacing: 0.01rem;
       line-height: 1.4;
       margin: 6.2rem 0 0 12rem;
-      // max-width: 395px;
       flex-grow: 1;
 
       @media (max-width: $desk_1280) {

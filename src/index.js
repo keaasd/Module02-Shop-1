@@ -11,6 +11,7 @@ var swiper = new Swiper(".offerSwiper", {
    slidesPerView: 3,
    spaceBetween: 30,
    slidesPerGroup: 3,
+   slidesPerScroll: 1,
    loop: true,
    loopFillGroupWithBlank: true,
    pagination: {
@@ -28,13 +29,20 @@ var swiper = new Swiper(".offerSwiper", {
       slidesPerView: 1,
       slidesPerGroup: 1
     },
-    768: {
+    500: {
       slidesPerView: 2,
-      slidesPerGroup: 2
+      slidesPerGroup: 2,
+      spaceBetween: 20
     },
-    1000: {
+    769: {
       slidesPerView: 3,
-      slidesPerGroup: 3
+      slidesPerGroup: 3,  
+      spaceBetween: 25
+    },
+    1200: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,  
+      spaceBetween: 30
     },
   }
 });
@@ -43,6 +51,7 @@ var swiper = new Swiper(".trendsSwiper", {
   slidesPerView: 3,
   spaceBetween: 30,
   slidesPerGroup: 3,
+  slidesPerScroll: 1,
   loop: true,
   loopFillGroupWithBlank: true,
   pagination: {
@@ -60,13 +69,20 @@ var swiper = new Swiper(".trendsSwiper", {
       slidesPerView: 1,
       slidesPerGroup: 1
     },
-    768: {
+    500: {
       slidesPerView: 2,
-      slidesPerGroup: 2
+      slidesPerGroup: 2,
+      spaceBetween: 20
     },
-    1000: {
+    769: {
       slidesPerView: 3,
-      slidesPerGroup: 3
+      slidesPerGroup: 3,  
+      spaceBetween: 25
+    },
+    1200: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,  
+      spaceBetween: 30
     },
   }
 });
