@@ -2003,6 +2003,10 @@ p {
 
    &-slide {
       text-align: center;
+
+      &:hover {
+         box-shadow: none;
+      }
    }
 
    &-button-next,
