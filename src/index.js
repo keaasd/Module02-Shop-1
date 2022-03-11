@@ -11,8 +11,6 @@ var swiper = new Swiper(".offerSwiper", {
    slidesPerView: 3,
    spaceBetween: 30,
    slidesPerGroup: 3,
-  slidesPerScroll: 3,
-  cssMode: true,
    loop: true,
    loopFillGroupWithBlank: true,
    pagination: {
@@ -28,12 +26,12 @@ var swiper = new Swiper(".offerSwiper", {
     // when window width is >= 320px
     320: {
       slidesPerView: 1,
-      slidesPerGroup: 1
+      slidesPerGroup: 1,
     },
     500: {
       slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 20
+      slidesPerGroup: 1,
+      spaceBetween: 20,
     },
     769: {
       slidesPerView: 3,
@@ -72,7 +70,7 @@ var swiper = new Swiper(".trendsSwiper", {
     },
     500: {
       slidesPerView: 2,
-      slidesPerGroup: 2,
+      slidesPerGroup: 1,
       spaceBetween: 20
     },
     769: {
@@ -109,17 +107,17 @@ var swiper = new Swiper(".catalogSwiper", {
    // when window width is >= 320px
    320: {
      slidesPerView: 2.5,
-     slidesPerGroup: 3,
+     slidesPerGroup: 1,
      spaceBetween: 10
    },
    600: {
      slidesPerView: 2.5,
-     slidesPerGroup: 3,
+     slidesPerGroup: 1,
      spaceBetween: 15
    },
    769: {
      slidesPerView: 3.5,
-     slidesPerGroup: 4,  
+     slidesPerGroup: 1,  
      spaceBetween: 20
    },
  }
