@@ -11,7 +11,8 @@ var swiper = new Swiper(".offerSwiper", {
    slidesPerView: 3,
    spaceBetween: 30,
    slidesPerGroup: 3,
-   slidesPerScroll: 1,
+  slidesPerScroll: 3,
+  cssMode: true,
    loop: true,
    loopFillGroupWithBlank: true,
    pagination: {
